@@ -1,0 +1,363 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Work | Hydrocephalus Theatre Funding Organization.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Mulish:wght@300;400;600&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+    --primary: #1F2B2B;
+    --accent: #2A8F88;
+    --white: #F4F4F4;
+    --gray: #E8ECEC;
+    --text: #1C1C1C;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+    background: var(--white);
+    color: var(--text);
+}
+
+/* HEADER */
+header {
+    background: var(--primary);
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header h1 {
+    color: var(--accent);
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: var(--accent);
+}
+
+/* MOBILE MENU TOGGLE */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* HERO SECTION (UPDATED IMAGE + SHADOW OVERLAY) */
+.hero {
+    background: 
+        linear-gradient(rgba(10,20,20,0.65), rgba(10,20,20,0.7)),
+        url('images/1.jpg')
+        center/cover;
+    height: 45vh;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 60px;
+    position: relative;
+}
+
+/* Soft shadow at the bottom of hero */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.45));
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin: 0;
+    color: var(--accent);
+}
+
+/* WORK SECTION */
+.work-section {
+    padding: 80px 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.work-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    text-align: center;
+    color: var(--primary);
+}
+.work-section h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--accent);
+    margin-top: 40px;
+}
+.work-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* PATIENTS */
+.patients-section {
+    padding: 90px 60px;
+}
+.patients-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary);
+}
+
+.patient-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* 3:4 IMAGE CARDS */
+.patient-card {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 8px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: 0.3s ease;
+}
+.patient-card:hover {
+    transform: scale(1.05);
+}
+.patient-card span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* IMPACT SECTION */
+.impact-section {
+    padding: 90px 60px;
+    background: var(--primary);
+    color: var(--white);
+}
+.impact-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 50px;
+}
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.impact-card {
+    background: var(--primary);
+    padding: 40px;
+    border-left: 5px solid var(--accent);
+    border-radius: 6px;
+}
+.impact-card h4 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+.impact-card p {
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+/* FOOTER */
+footer {
+    background: #162021;
+    padding: 40px;
+    color: var(--white);
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+    .patient-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* FIXED MOBILE MENU */
+@media(max-width:768px){
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+    nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 15px;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+    nav.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero {
+        padding: 0 20px;
+        height: 30vh;
+    }
+    .hero h2 {
+        font-size: 36px;
+    }
+    .work-section,
+    .patients-section,
+    .impact-section {
+        padding: 60px 25px;
+    }
+    .patient-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1><a href="home.html" style="color: var(--accent); text-decoration: none;">
+        Hydrocephalus Theatre Funding Organization.
+    </a></h1>
+
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+
+    <nav>
+        <a href="home.html">Home.</a>
+        <a href="about_us.html">About Us.</a>
+        <a href="our_work.html">Our Work.</a>
+        <a href="contact_us.html">Contact Us.</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Our Work</h2>
+</section>
+
+<!-- CONTENT UNCHANGED BELOW -->
+
+<section class="work-section">
+    <h3>What Do We Do?</h3>
+
+    <h4>Funding Urgent Theatre Operations</h4>
+    <p>We cover the costs needed for quick surgical interventions like VP shunt insertions and ETV procedures. This ensures that no newborn waits too long for life-saving surgery and reduces the risk of complications.</p>
+
+    <h4>Supporting Medical Teams</h4>
+    <p>We provide overtime allowances for doctors and nurses who operate after normal working hours. This support prevents delays and ensures medical teams can respond immediately to emergencies.</p>
+
+    <h4>Supplying Essential Surgical Materials</h4>
+    <p>We help ensure that VP shunts, theatre consumables, and emergency supplies are available when needed. Adequate resources allow hospitals to perform surgeries efficiently and safely.</p>
+
+    <h4>Assisting Families</h4>
+    <p>We offer guidance, counselling, and follow-up support to parents during and after the treatment process. Families receive information, emotional support, and help navigating hospital procedures.</p>
+</section>
+
+<section class="patients-section">
+    <h3>Some Of Our Treated Patients</h3>
+    <div class="patient-grid">
+
+        <div class="patient-card" style="background-image: url('images/patient1.jpg');">
+            <span>Samuel Phiri</span>
+        </div>
+
+        <div class="patient-card" style="background-image: url('images/patient2.jpg');">
+            <span>Matthew Tawulo</span>
+        </div>
+
+        <div class="patient-card" style="background-image: url('images/patient3.jpg');">
+            <span>Nancy Kalimbula</span>
+        </div>
+
+        <div class="patient-card" style="background-image: url('images/patient4.jpg');">
+            <span>Minors Likoma</span>
+        </div>
+
+        <div class="patient-card" style="background-image: url('images/patient5.jpg');">
+            <span>Tereza Joseph</span>
+        </div>
+
+        <div class="patient-card" style="background-image: url('images/patient6.jpg');">
+            <span>Maxwell Augustino</span>
+        </div>
+
+    </div>
+</section>
+
+<section class="impact-section">
+    <h3>Our Impact</h3>
+
+    <div class="impact-grid">
+        <div class="impact-card">
+            <h4>50+</h4>
+            <p>Life-saving surgeries supported for newborns with Hydrocephalus.</p>
+        </div>
+        <div class="impact-card">
+            <h4>Reduced Waiting Times</h4>
+            <p>Faster access to emergency procedures.</p>
+        </div>
+        <div class="impact-card">
+            <h4>Strengthened Hospitals</h4>
+            <p>Improved hospital capacity, teamwork, and readiness.</p>
+        </div>
+        <div class="impact-card">
+            <h4>Community Awareness</h4>
+            <p>Increased caregiver awareness and early care-seeking.</p>
+        </div>
+    </div>
+
+    <p style="text-align:center; margin-top:30px; font-size:18px; opacity:0.9;">
+        Your support continues to help us save more lives and reach more families in need.
+    </p>
+</section>
+
+<footer>
+    &copy; 2025 Hydrocephalus Theatre Funding Organization — Together We Save Lives.
+</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector('header nav').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

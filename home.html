@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Welcome | Hydrocephalus Theatre Funding Organization.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Mulish:wght@300;400;600&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+    --primary: #1F2B2B;    
+    --accent: #2A8F88;     
+    --white: #F4F4F4;      
+    --bg-gray: #E8ECEC;    
+    --text: #1C1C1C;       
+}
+
+/* RESET & BODY */
+body {
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+    background: var(--white);
+    color: var(--text);
+}
+
+/* HEADER */
+header {
+    background: var(--primary);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header h1 {
+    color: var(--accent);
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+nav {
+    display: flex;
+    gap: 25px;
+}
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: var(--accent);
+}
+
+/* MOBILE MENU BUTTON */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* HERO SECTION – updated */
+.hero {
+    background: linear-gradient(rgba(10,20,20,0.65), rgba(10,20,20,0.7)),
+        url('images/4.jpg') center/cover;
+    height: 90vh;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    position: relative;
+}
+
+/* Soft shadow at the bottom of hero */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.45));
+}
+.hero-content {
+    max-width: 600px;
+}
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.cta-btn {
+    background: var(--accent);
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+.cta-btn:hover {
+    background: #23766f;
+}
+
+/* INTRODUCTION SECTION */
+.intro-section {
+    padding: 80px 60px;
+    background: var(--bg-gray);
+    text-align: center;
+}
+.intro-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+.intro-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* IMPACT SECTION */
+.impact-section {
+    padding: 90px 60px;
+    background:#fff;
+}
+.impact-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--primary);
+}
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.impact-card {
+    background: var(--white);
+    padding: 40px;
+    border-left: 5px solid var(--accent);
+    border-radius: 6px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.06);
+}
+.impact-card h4 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+}
+.impact-card p {
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+/* DONATION BAR */
+.donor-bar {
+    padding: 70px 60px;
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+}
+.donor-bar h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+.donor-bar p {
+    opacity: 0.85;
+    margin-bottom: 35px;
+    font-size: 18px;
+}
+.progress-container {
+    width: 60%;
+    margin: 0 auto;
+    background: #3a3a3a;
+    height: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-fill {
+    width: 65%;
+    height: 100%;
+    background: var(--accent);
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    padding: 40px;
+    color: var(--white);
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+    .hero h2 { font-size: 44px; }
+}
+
+@media(max-width:768px){
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    nav.active {
+        display: flex;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero {
+        padding: 0 20px;
+        height: 70vh;
+    }
+    .hero h2 { font-size: 36px; }
+    .impact-section, .donor-bar, .intro-section {
+        padding: 60px 20px;
+    }
+    .progress-container { width: 90%; }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <h1>
+        <a href="home.html" style="color: var(--accent); text-decoration: none;">
+            Hydrocephalus Theatre Funding Organization.
+        </a>
+    </h1>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <nav>
+        <a href="home.html">Home.</a>
+        <a href="about_us.html">About Us.</a>
+        <a href="our_work.html">Our Work.</a>
+        <a href="contact_us.html">Contact Us.</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Saving Lives Through Urgent Surgical Intervention</h2>
+        <p>We support newborn babies with Hydrocephalus by funding critical theatre operations and helping medical teams perform life-saving procedures on time.</p>
+        <a href="our_work.html" class="cta-btn">Support Our Work</a>
+    </div>
+</section>
+
+<section class="intro-section">
+    <h3>Introduction</h3>
+    <p>
+        Hydrocephalus Theatre Funding Organization is a health-support initiative that helps newborn babies in Malawi receive immediate life-saving surgery for Hydrocephalus. 
+        We partner with medical teams to reduce waiting times, provide essential supplies, and fund after-hours operations so no child suffers or dies because of delayed treatment.
+    </p>
+</section>
+
+<section class="impact-section">
+    <h3>Our Impact</h3>
+    <div class="impact-grid">
+        <div class="impact-card">
+            <h4>50+</h4>
+            <p>Life-saving surgeries supported for newborn babies.</p>
+        </div>
+        <div class="impact-card">
+            <h4>40%</h4>
+            <p>Reduction in surgery waiting times at key hospitals.</p>
+        </div>
+        <div class="impact-card">
+            <h4>24/7</h4>
+            <p>After-hours medical team support to prevent delays.</p>
+        </div>
+        <div class="impact-card">
+            <h4>Care</h4>
+            <p>Improved hospital readiness through essential supplies.</p>
+        </div>
+    </div>
+</section>
+
+<section class="donor-bar">
+    <h3>Help Us Save More Lives</h3>
+    <p>Your generosity gives newborns a fighting chance against Hydrocephalus.</p>
+    <div class="progress-container">
+        <div class="progress-fill"></div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Hydrocephalus Theatre Funding Organization — Together We Save Lives.
+</footer>
+
+<script>
+function toggleMenu() {
+    const nav = document.querySelector('header nav');
+    nav.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

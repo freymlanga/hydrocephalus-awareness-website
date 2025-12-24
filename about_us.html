@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us | Hydrocephalus Theatre Funding Organization.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Mulish:wght@300;400;600&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+    --primary: #1F2B2B;       /* Dark medical teal */
+    --accent: #2A8F88;        /* Humanitarian teal */
+    --white: #F4F4F4;         /* Soft white */
+    --gray: #E8ECEC;          /* Muted gray */
+    --text: #1C1C1C;          /* Strong readable gray */
+}
+
+/* RESET & BODY */
+body {
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+    background: var(--white);
+    color: var(--text);
+}
+
+/* HEADER */
+header {
+    background: var(--primary);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header h1 {
+    color: var(--accent);
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+nav {
+    display: flex;
+    gap: 25px;
+}
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: var(--accent);
+}
+
+/* MOBILE MENU BUTTON */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(31,43,44,0.65), rgba(31,43,44,0.50)),
+        url('images/3.jpg') center/cover;
+    height: 45vh;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 60px;
+}
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    margin: 0;
+    color: var(--accent);
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 80px 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.about-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: var(--primary);
+    text-align: center;
+}
+.about-section h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--accent);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+.about-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* VALUES BAR */
+.values-bar {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+}
+.values-bar h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--accent);
+    margin-bottom: 25px;
+}
+.values-list-horizontal {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 20px; /* ensures bullets show */
+    margin: 0;
+}
+
+.values-list-horizontal li {
+    margin: 0 25px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    list-style-type: disc; /* ensures bullets appear */
+}
+
+
+/* FOOTER */
+footer {
+    background: #162021;
+    padding: 40px;
+    color: var(--white);
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+    .hero h2 { font-size: 36px; }
+}
+
+@media(max-width:768px){
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 15px;
+    }
+    nav.active {
+        display: flex;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero {
+        padding: 0 20px;
+        height: 30vh;
+    }
+    .hero h2 { font-size: 28px; }
+    .about-section { padding: 60px 20px; }
+    .values-list-horizontal li { margin: 15px 15px; font-size: 18px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <h1><a href="home.html" style="color: var(--accent); text-decoration: none;">
+            Hydrocephalus Theatre Funding Organization.
+        </a></h1>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <nav>
+        <a href="home.html">Home.</a>
+        <a href="about_us.html">About Us.</a>
+        <a href="our_work.html">Our Work.</a>
+        <a href="contact_us.html">Contact Us.</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>About Us</h2>
+</section>
+
+<section class="about-section">
+    <h3>Who Are We?</h3>
+    <p>We are a community-driven organization dedicated to helping newborn babies diagnosed with Hydrocephalus receive quick and safe surgical treatment. Our work started at Queen Elizabeth Central Hospital, where we supported urgent theatre interventions for infants who could not wait long for treatment.</p>
+
+    <h4>Our Mission</h4>
+    <p>To reduce disability and mortality caused by Hydrocephalus by funding timely theatre operations, supporting medical teams, and ensuring essential surgical materials are available.</p>
+
+    <h4>Why Our Work Matters</h4>
+    <p>Hydrocephalus is a serious condition where excess fluid builds up in a baby’s brain. When treatment is delayed, it leads to severe brain damage, disability, and sometimes death. Many families cannot afford the cost of urgent surgery, and hospitals often have limited resources. Our organization exists to bridge that gap and give every child a fighting chance.</p>
+</section>
+
+<section class="values-bar">
+    <h3>Our Values</h3>
+    <ul class="values-list-horizontal">
+        <li>Compassion</li>
+        <li>Transparency</li>
+        <li>Accountability</li>
+        <li>Partnership</li>
+        <li>Community Support</li>
+    </ul>
+</section>
+
+<footer>
+    &copy; 2025 Hydrocephalus Theatre Funding Organization — Together We Save Lives.
+</footer>
+
+<script>
+function toggleMenu() {
+    const nav = document.querySelector('header nav');
+    nav.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
